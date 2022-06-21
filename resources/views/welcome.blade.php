@@ -239,7 +239,7 @@
                                 <div class="divider"></div>
                             </div>
                             <p>
-                                <a href="{{ route('checkout') }}" class="btn btn-master btn-primary w-100 mt-3">
+                                <a href="{{ route('checkout.create','belajar-nagih') }}" class="btn btn-master btn-primary w-100 mt-3">
                                     Ambil Kelas Ini
                                 </a>
                             </p>
@@ -278,7 +278,7 @@
                                 <div class="divider"></div>
                             </div>
                             <p>
-                                <a href="{{ route('checkout') }}" class="btn btn-master btn-secondary w-100 mt-3">
+                                <a href="{{ route('checkout.create','baru-belajar') }}" class="btn btn-master btn-secondary w-100 mt-3">
                                     Mulai Kelas Ini
                                 </a>
                             </p>
