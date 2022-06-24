@@ -73,7 +73,7 @@ body {
 
 .testimonials {
   background: #F7F7FB;
-  margin-top: 370px;
+  margin-top: 230px;
   padding: 70px 0 70px 0;
 }
 
@@ -211,10 +211,6 @@ body {
   color: #fff;
 }
 
-.btn-primary {
-  background: #7839F3;
-  color: #fff;
-}
 
 .btn-primary:hover {
   background: #31B380;

@@ -11,10 +11,10 @@
                             LEARN FROM EXPERT
                         </p>
                         <h1 class="header">
-                            Start Your <span class="text-purple">Developer <br> Journey</span> Today
+                            Start Your <span class="text-primary">Developer <br> Journey</span> Today
                         </h1>
                         <p class="support">
-                            Our bootcamp is helping junior developers who <br> are really passionate in the programming.
+                            Bootcamp kami membantu junior developer <br> yang mempunyai keinginan menjadi programmer
                         </p>
                         <p class="cta">
                             <a href="#" class="btn btn-master btn-primary">
@@ -59,7 +59,7 @@
                         Diversity
                     </h3>
                     <p class="support">
-                        Learn from anyone around the <br> world and get a new skills
+                        Belajar dari mana saja <br> dan dapatkan skill baru
                     </p>
                 </div>
             </div>
@@ -67,10 +67,10 @@
                 <div class="item-benefit">
                 <img src="{{ asset('images/ic_globe-1.png') }}" class="icon" alt="">
                     <h3 class="title">
-                        A.I Guideline
+                        Guideline
                     </h3>
                     <p class="support">
-                        Lara will help you to choose <br> which path that suitable for you
+                        Codev8 akan membantu kamu <br> memilih path yang sesuai untukmu
                     </p>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                         1-1 Mentoring
                     </h3>
                     <p class="support">
-                        We will ensure that you will get <br> what you really do need
+                        Kami akan memastikan bahwa <br> kamu mendapatkan yang kamu mau
                     </p>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                         Future Job
                     </h3>
                     <p class="support">
-                        Get your dream job in your dream <br> company together with us
+                        Raih pekerjaan impianmu <br> bersama kami
                     </p>
                 </div>
             </div>
@@ -100,7 +100,7 @@
     </div>
 </section>
 
-<section class="steps">
+{{-- <section class="steps">
     <div class="container">
         <div class="row item-step pb-70">
             <div class="col-lg-6 col-12 text-center">
@@ -167,7 +167,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <section class="pricing">
     <div class="container">
@@ -180,8 +180,8 @@
                     Start Your Journey
                 </h2>
                 <p class="support">
-                    Learn how to speaking in public to demonstrate your <br> final project and receive the important feedbacks
-                </p>
+                    Pilih paket kelas sesuai pilihanmu <br> dan dapatkan silabus sesuai industri terkini
+                                </p>
                 <p class="mt-5">
                     <a href="#" class="btn btn-master btn-thirdty me-3">
                         View Syllabus
@@ -191,7 +191,7 @@
             <div class="col-lg-7 col-12">
                 <div class="row">
                     <div class="col-lg-6 col-12">
-                        <div class="table-pricing paket-gila">
+                        <div class="table-pricing paket-biasa   ">
                             <p class="story text-center">
                                 BELAJAR NAGIH
                             </p>
@@ -336,13 +336,13 @@
                                 Code is really important if we want to build a company and strike to the win
                             </p>
                             <div class="user">
-                                <img src="{{ asset('images/angga.png') }}" class="photo" alt="">
+                                <img src="{{ asset('images/beatrice.png') }}" class="photo" alt="">
                                 <div class="info">
                                     <h4 class="name">
-                                        Angga
+                                        Beatrice
                                     </h4>
                                     <p class="role">
-                                        CEO at BWA Corp
+                                        CEO at Ajus Corp
                                     </p>
                                 </div>
                             </div>
