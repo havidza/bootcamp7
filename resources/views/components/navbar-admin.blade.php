@@ -11,9 +11,10 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Admin Dashboard</a>
                 </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link" href="#">Mentor</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Daftar Mentor</a>
                 </li>
+                {{-- 
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
                 </li>

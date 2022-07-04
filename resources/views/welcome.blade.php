@@ -10,9 +10,11 @@
                         <p class="story">
                             LEARN FROM EXPERT
                         </p>
+                        
                         <h1 class="header">
                             Start Your <span class="text-primary">Developer <br> Journey</span> Today
                         </h1>
+                        
                         <p class="support">
                             Bootcamp kami membantu junior developer <br> yang mempunyai keinginan menjadi programmer
                         </p>

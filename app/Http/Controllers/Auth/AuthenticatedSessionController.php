@@ -20,6 +20,11 @@ class AuthenticatedSessionController extends Controller
         return view('auth.login');
     }
 
+        public function mentor()
+    {
+        return view('auth.login-mentor');
+    }
+
     /**
      * Handle an incoming authentication request.
      *

@@ -2,6 +2,32 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.border {
+  border: 1px solid #dee2e6!important;
+  border-top-color: rgb(222, 226, 230) !important;
+  border-top-style: solid !important;
+  border-top-width: 1px !important;
+  border-right-color: rgb(222, 226, 230) !important;
+  border-right-style: solid !important;
+  border-right-width: 1px !important;
+  border-bottom-color: rgb(222, 226, 230) !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+  border-left-color: rgb(222, 226, 230) !important;
+  border-left-style: solid !important;
+  border-left-width: 1px !important;
+  border-image-source: initial !important;
+  border-image-slice: initial !important;
+  border-image-width: initial !important;
+  border-image-outset: initial !important;
+  border-image-repeat: initial !important;
+}
+
+.rounded {
+  border-radius: .25rem!important;
+}
+
+
 .pl-150 {
   padding-left: 150px;
 }
@@ -199,7 +225,7 @@ body {
   margin-top: 30px;
 }
 
-.btn-master, .btn-thirdty, .btn-primary, .btn-secondary {
+.btn-master, .btn-thirdty, .btn-primary, .btn-secondary, .btn-success {
   padding: 11px 36px 11px 36px;
   border-radius: 100px;
   border: 0;
@@ -212,9 +238,10 @@ body {
 }
 
 
-.btn-primary:hover {
+/*.btn-primary, .btn-danger:hover {
   background: #31B380;
 }
+*/
 
 .story {
   font-weight: 600;

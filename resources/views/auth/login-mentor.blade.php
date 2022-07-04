@@ -16,7 +16,7 @@
             @csrf
 
             <!-- Email Address -->
-            <center><h3>Admin Dashboard</h3></center>
+            <center><h3>Mentor Dashboard</h3></center>
             <div>
                 <x-label for="email" :value="__('Email')" />
 

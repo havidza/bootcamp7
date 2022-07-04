@@ -36,13 +36,19 @@
                         </td>
                         <td>
                             @if ($checkout->is_paid)
-                                <strong class="text-success">Payment Success</strong>
+                                <strong class="text-success">Pembayaran Berhasil</strong>
                             @else
-                                <strong>Waiting for Payment</strong>
+                                <strong>Menunggu Pembayaran</strong>
                             @endif
                         </td>
+                        @if ($checkout->is_paid) 
                         <td>
-                            <a href="https://wa.me/081227360292?text=Hi, saya [nama] ingin bertanya tentang kelas {{ $checkout->Camp->title }}" class="btn btn-primary">
+                        <a href="{{ route('user.class') }}" class="btn btn-primary"> Go To Class
+                                </a>
+                        </td>
+                        @endif
+                        <td>
+                            <a href="https://wa.me/081227360292?text=Hi, saya [nama] ingin bertanya tentang kelas {{ $checkout->Camp->title }}" class="btn btn-success">
                                 Contact Support
                             </a>
                         </td>

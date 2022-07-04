@@ -3,7 +3,7 @@
 <br><br>
     <div class="container">
         <div class="row">
-            <div class="col-10 offset-1">
+            <div class="col-11 offset-0">
                 <div class="card">
                     <div class="card-header">
                         List Camps Member Codev8
@@ -53,6 +53,7 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        <a href="{{ route('admin.cetak-pdf') }}" class="offset-11"><button>Print PDF</button></a>
                     </div>
                 </div>
             </div>

@@ -7,6 +7,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\User\DashboardController as UserDashboard;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
 use App\Http\Controllers\Admin\CheckoutController as AdminCheckout;
+use App\Http\Controllers\User\ClassController;
+use App\Http\Controllers\Classes\baruBelajarController as baruBelajar;
+use App\Http\Controllers\Classes\belajarNagihController as belajarNagih;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +44,9 @@ Route::middleware(['auth'])->group(function () {
     //user dashboard
     Route::prefix('user/dashboard')->namespace('User')->name('user.')->middleware('ensureUserRole:user')->group(function () {
         Route::get('/', [UserDashboard::class, 'index'])->name('dashboard');
+        Route::get('/class', [ClassController::class, 'index'])->name('class');
+
+        // Route::get('/{class:slug}', [UserDashboard::class, 'create'])->name('class.create');
     });
 
     //Admin Dashboard
@@ -48,10 +54,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', [AdminDashboard::class, 'index'])->name('dashboard');
         // admin checkout
         Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
+        Route::get('/cetak-pdf', [AdminDashboard::class, 'pdf'])->name('cetak-pdf');
     });
-
-
-
 
     //invoice
     Route::get('dashboard/checkout/invoice/{checkout}', [CheckoutController::class, 'invoice'])->name('user.checkout.invoice');
