@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Models\CampFeed;
-use App\Models\Checkout;
 use Illuminate\Http\Request;
-use App\Models\Camp;
+use App\Models\CampFeed;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ClassController extends Controller
 {
@@ -17,6 +16,9 @@ class ClassController extends Controller
     public function index()
     {
         # code...
-        return view('user.class');
+        $camp_feeds = DB::table('camp_feeds')->paginate(1);
+        return view('user.class', [
+            'camp_feeds' => $camp_feeds
+        ]);
     }
 }
