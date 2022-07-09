@@ -16,9 +16,9 @@ class Mentor extends Model
         'feed_id',
         'alamat',
         'email'
-    ]
+    ];
 
-     protected $hidden = [
+    protected $hidden = [
         'password'
     ];
 }
