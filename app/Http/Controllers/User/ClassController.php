@@ -16,7 +16,7 @@ class ClassController extends Controller
     public function index()
     {
         # code...
-        $camp_feeds = DB::table('camp_feeds')->paginate(1);
+        $camp_feeds = DB::table('camp_feeds')->simplePaginate(1);
         return view('user.class', [
             'camp_feeds' => $camp_feeds
         ]);

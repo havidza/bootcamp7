@@ -30,29 +30,32 @@
         <h5>{{ $cf->header }}</h5><br><br>
     <div class="row">
         <div class="col-4">
-            <table class="table table-borderless"> 
+            <table class="table table-borderless table-responsive-md"> 
                <thead>
                     <tr>
-                        <th><ul class="list-group">
-                            <li class="list-group-item">Pengantar</li>
-                            <li class="list-group-item">Komputasi Dasar</li>
-                            <li class="list-group-item">Model Penerapan untuk Komputasi Cloud</li>
-                          </ul></th>
+                        <th>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Pendahuluan</a>
+                                <a href="#" class="list-group-item list-group-item-action">Komputasi Cloud</a>
+                                <a href="#" class="list-group-item list-group-item-action">Model Penerapan Untuk Komputasi Dasar</a>
+                              </div>
+                        </th>
                     </tr>
-                    {{-- <tr>
+                    <tr>
                         <th>
                             @if ($cf->camp_id == 1)
-                            <a href="#" class="btn btn-primary"> Cetak PDF
+                            <a href="#"> <button>Cetak PDF</button>
                              </a>
-                                
+                             <a href="#"> <button>Cetak Sertifikat</button>
+                             </a>   
                             @endif
                         </th>
-                    </tr> --}}
+                    </tr>
                </thead>
             </table>
         </div>
         <div class="col-8">
-            <table class="table table-borderless">
+            <table class="table table-borderless table-responsive-md">
                 <thead>
                     <tr>
                         <td align="center">
@@ -60,18 +63,33 @@
                                 <li class="list-group-item"><h4>{{ $cf->title }}</h4></td></li>
                             </ul>
                     </tr>
-                    <tr>
+                    <tr><tr><td><br></td></tr>
                         <td align="center"><img src="{{ $cf->image }}" width="100%"></td>
                     </tr>
-                    <tr>
+                    <tr><tr><td><br></td></tr>
                         <td align="justify">{{ $cf->feed }}</td>
                     </tr>
+                </thead>
+            </table>
+            <table class="table table-borderless table-responsive-md">
+                <thead>
+                <tr>
+                    <td><ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="{{ $camp_feeds->previousPageUrl() }}">Previous</a></li>
+                      </ul>
+                    </td>
+                    <td>
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item"><a class="page-link" href="{{ $camp_feeds->nextPageUrl() }}">Next</a></li>
+                        </ul>
+                    </td>
+                </tr>    
                 </thead>
             </table> 
         </div>
     </div>
 </center>
 @endforeach
-{{ $camp_feeds->links() }}
+{{-- {{ $camp_feeds->links() }} --}}
 </div>
 @endsection
