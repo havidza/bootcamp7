@@ -53,20 +53,18 @@
                             @endif --}}
                             </div>
                             <div class="mb-4">
-                                <label class="form-label">Card Number</label>
-                                <input name="card_number" type="number" class="form-control" required>
+                                <label class="form-label">Phone</label>
+                                <input name="phone" type="text" class="form-control" value="{{ Auth::user()->phone }}" required>
+                                {{-- @if ($errors->has('occupation'))
+                                <p class="text-danger">{{ $errors->first('occupation') }}</p>
+                            @endif --}}
                             </div>
-                            <div class="mb-5">
-                                <div class="row">
-                                    <div class="col-lg-6 col-12">
-                                        <label class="form-label">Expired</label>
-                                        <input name="expired" type="month" class="form-control" required>
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        <label class="form-label">CVC</label>
-                                        <input name="cvc" type="number" class="form-control" required>
-                                    </div>
-                                </div>
+                            <div class="mb-4">
+                                <label class="form-label">Address</label>
+                                <input name="address" type="text" class="form-control" value="{{ Auth::user()->address }}" required>
+                                {{-- @if ($errors->has('occupation'))
+                                <p class="text-danger">{{ $errors->first('occupation') }}</p>
+                            @endif --}}
                             </div>
                             <button type="submit" class="w-100 btn btn-primary">Pay Now</button>
                             <p class="text-center subheader mt-4">
