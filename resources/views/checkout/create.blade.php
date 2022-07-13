@@ -53,25 +53,31 @@
                             @endif --}}
                             </div>
                             <div class="mb-4">
-                                <label class="form-label">Card Number</label>
-                                <input name="card_number" type="number" class="form-control" required>
+                                <label class="form-label">Phone Number</label>
+                                <input name="phone_number" type="text" class="form-control" required>
                             </div>
-                            <div class="mb-5">
-                                <div class="row">
-                                    <div class="col-lg-6 col-12">
-                                        <label class="form-label">Expired</label>
-                                        <input name="expired" type="month" class="form-control" required>
-                                    </div>
-                                    <div class="col-lg-6 col-12">
-                                        <label class="form-label">CVC</label>
-                                        <input name="cvc" type="number" class="form-control" required>
-                                    </div>
-                                </div>
+                            <div class="mb-4">
+                                <label class="form-label">Unique Code</label>
+                                <input name="uniquecode" type="text" class="form-control" required disabled>
                             </div>
                             <button type="submit" class="w-100 btn btn-primary">Pay Now</button>
                             <p class="text-center subheader mt-4">
                                 <img src="{{ asset('images/ic_secure.svg') }}" alt=""> Your payment is secure and encrypted.
                             </p>
+                               
+                        <script type="text/javascript"> 
+                            function makeid(length) {
+                                var result           = '';
+                                var characters       = '0123456789';
+                                var charactersLength = characters.length;
+                                for ( var i = 0; i < length; i++ ) {
+                                result += characters.charAt(Math.floor(Math.random() * 
+                            charactersLength));
+                            }
+                            return result;
+                            }
+                                document.querySelector('input[name="uniquecode"]').value = 'CAMP' + '-' + '0' + '{{ $camp->id }}' + '-' + makeid(6);
+                            </script>
                         </form>
                     </div>
                 </div>

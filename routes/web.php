@@ -55,6 +55,12 @@ Route::middleware(['auth'])->group(function () {
         // admin checkout
         Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
         Route::get('/cetak-pdf', [AdminDashboard::class, 'pdf'])->name('cetak-pdf');
+        Route::get('/addMentor', [AdminDashboard::class, 'addMentor'])->name('addMentor');
+    });
+
+    //Mentor Dashboard
+    Route::prefix('mentor/dashboard')->namespace('Mentor')->name('mentor.')->group(function () {
+        Route::get('/', [MentorLogin::class, 'index'])->name('dashboard');
     });
 
     //invoice

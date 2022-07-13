@@ -13,7 +13,9 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th>User Code</th>
                                     <th>User</th>
+                                    <th>Unique Code</th>
                                     <th>Camp</th>
                                     <th>Price</th>
                                     <th>Register Data</th>
@@ -24,7 +26,9 @@
                             <tbody>
                                 @forelse ($checkouts as $checkout)
                                     <tr>
+                                        <td>USER-0{{ $checkout->User->id }}</td>
                                         <td>{{ $checkout->User->name }}</td>
+                                        <td>{{ $checkout->uniquecode }}</td>
                                         <td>{{ $checkout->Camp->title }}</td>
                                         <td>IDR {{ $checkout->Camp->price }}k</td>
                                         <td>{{ $checkout->created_at->format('d M y') }}</td>

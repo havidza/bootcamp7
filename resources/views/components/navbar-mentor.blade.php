@@ -9,10 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {{ (request()->is('admin/dashboard')) ? 'active' : '' }}" aria-current="page" href="{{ route('admin.dashboard') }}">Admin Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ (request()->is('admin/dashboard/addMentor')) ? 'active' : '' }}" href="{{ route('admin.addMentor') }}">Daftar Mentor</a>
+                    <a class="nav-link {{ (request()->is('mentor/dashboard')) ? 'active' : '' }}" aria-current="page" href="{{ route('mentor.dashboard') }}">Mentor Dashboard</a>
                 </li>
                 {{-- 
                 <li class="nav-item">
@@ -30,7 +27,7 @@
                     @if (Auth::user()->avatar)
                     <img src={{ Auth::user()->avatar }} class="user-photo rounded-circle" alt="">    
                     @else
-                    <img src="https://ui-avatars.com/api/?name=Admin" class="user-photo rounded-circle" alt="">    
+                    <img src="https://ui-avatars.com/api/?name={{ Auth::user()->name }}" class="user-photo rounded-circle" alt="">    
                     @endif
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto;">
                         <li>

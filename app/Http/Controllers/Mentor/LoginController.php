@@ -18,10 +18,7 @@ class LoginController extends Controller
     public function index()
     {
         //
-        $mentors = DB::table('mentor');
-        return view('mentor.login-mentor', [
-            'mentor' => $mentors
-        ]);
+        return view('mentor.dashboard');
     }
 
     /**

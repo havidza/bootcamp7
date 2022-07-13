@@ -9,6 +9,7 @@ use App\Models\Camp;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Checkout\AfterCheckout;
+use Illuminate\Support\Str;
 
 class CheckoutController extends Controller
 {
@@ -46,7 +47,7 @@ class CheckoutController extends Controller
      */
     public function store(Request $request, Camp $camp)
     {
-
+        // var_dump($request->all());
         //mapping request data
         $data = $request->all();
         $data['user_id'] = Auth::id();
