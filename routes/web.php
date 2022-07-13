@@ -8,8 +8,7 @@ use App\Http\Controllers\User\DashboardController as UserDashboard;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
 use App\Http\Controllers\Admin\CheckoutController as AdminCheckout;
 use App\Http\Controllers\User\ClassController;
-use App\Http\Controllers\Classes\baruBelajarController as baruBelajar;
-use App\Http\Controllers\Classes\belajarNagihController as belajarNagih;
+use App\Http\Controllers\Mentor\LoginController as MentorLogin;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +30,7 @@ Route::get('/', function () {
 //Socialite routes
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
 Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
+
 
 Route::middleware(['auth'])->group(function () {
     //checkout route

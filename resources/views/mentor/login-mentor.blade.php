@@ -12,20 +12,20 @@
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('login') }}">
+        <form method="post" action="{{ route('login.store') }}">
             @csrf
 
             <!-- Email Address -->
             <center><h3>Mentor Dashboard</h3></center>
             <div>
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -49,7 +49,7 @@
                 @endif
 
                 <x-button class="ml-3">
-                    {{ __('Log in') }}
+                   Login
                 </x-button>
             </div>
         </form>
