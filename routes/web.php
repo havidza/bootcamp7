@@ -56,6 +56,11 @@ Route::middleware(['auth'])->group(function () {
         Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
         Route::get('/cetak-pdf', [AdminDashboard::class, 'pdf'])->name('cetak-pdf');
         Route::get('/addMentor', [AdminDashboard::class, 'addMentor'])->name('addMentor');
+        Route::get('/form-add', [AdminDashboard::class, 'formAddMentor'])->name('form-add');
+        Route::post('/add', [AdminDashboard::class, 'store'])->name('add');
+        Route::get('/mentor/edit/{id}', [AdminDashboard::class, 'edit'])->name('edit');
+        Route::post('/mentor/update', [AdminDashboard::class, 'update'])->name('update');
+        Route::get('/mentor/destroy/{id}', [AdminDashboard::class, 'destroy'])->name('destroy');
     });
 
     //Mentor Dashboard

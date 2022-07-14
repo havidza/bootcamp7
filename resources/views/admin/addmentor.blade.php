@@ -7,9 +7,11 @@
                 <div class="card">
                     <div class="card-header">
                        Daftar Mentor
+                       <a href="{{ route('admin.form-add') }}">
                        <button class="btn btn-primary btn-sm " style="float: right;">
                         Tambah Mentor
                         </button>
+                    </a>
                     </div>
                     <div class="card-body">
                         <table class="table">
@@ -32,12 +34,13 @@
                                 @else
                                 <td>Tidak Aktif</td>
                                 @endif
-                                <td> <button class="btn btn-success btn-sm">
+                                <td> <a href="{{ route('admin.edit', $usr->id) }}"><button class="btn btn-success btn-sm">
                                     EDIT
-                                </button>
+                                </button></a>
+                                <a href="{{ route('admin.destroy', $usr->id) }}">
                                 <button class="btn btn-danger btn-sm">
                                     HAPUS
-                                </button></td>
+                                </button></a></td>
                             </tr>
                                 
                             @endforeach

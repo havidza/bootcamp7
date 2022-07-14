@@ -42,12 +42,12 @@
                     </tr>
                     <tr>
                         <th>
-                            @if ($cf->camp_id == 1)
+                            {{-- @if ($cf->camp_id == 1)
                             <a href="#"> <button>Cetak PDF</button>
                              </a>
                              <a href="#"> <button>Cetak Sertifikat</button>
                              </a>   
-                            @endif
+                            @endif --}}
                         </th>
                     </tr>
                </thead>
