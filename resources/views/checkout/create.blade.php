@@ -54,11 +54,11 @@
                             </div>
                             <div class="mb-4">
                                 <label class="form-label">Phone Number</label>
-                                <input name="phone_number" type="text" class="form-control" required>
+                                <input name="phone_number" type="text" class="form-control" required value="{{ Auth::user()->phone_number }}">
                             </div>
                             <div class="mb-4">
                                 <label class="form-label">Unique Code</label>
-                                <input name="uniquecode" type="text" class="form-control" required disabled>
+                                <input name="uniquecode" type="text" class="form-control" required readonly="readonly">
                             </div>
                             <button type="submit" class="w-100 btn btn-primary">Pay Now</button>
                             <p class="text-center subheader mt-4">

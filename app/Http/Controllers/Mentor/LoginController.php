@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Mentor;
+use App\Models\CampFeed;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -18,7 +19,9 @@ class LoginController extends Controller
     public function index()
     {
         //
-        return view('mentor.dashboard');
+        $camp_feeds = CampFeed::with('Camp')->get();
+
+        return view('mentor.dashboard', compact('camp_feeds'));
     }
 
     /**
@@ -37,22 +40,27 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        //
-        // $mentor = Mentor::where('email', $request->email)->first();
-        // if ($mentor) {
-        //     if (password_verify($request->password, $mentor->password)) {
-        //         Auth::guard('mentor')->login($mentor);
-        //         return redirect()->route('mentor.dashboard');
-        //     } else {
-        //         return redirect()->back()->with('error', 'Password salah');
-        //     }
-        // } else {
-        //     return redirect()->back()->with('error', 'Email tidak ditemukan');
-        // }
+        // DB::table('camp_feeds')->insert([
+        //     'title' => $request->title,
+        //     'feed' => $request->feed,
+        //     'image' => $request->image,
+        //     'camp_id' => $request->camp_id,
+        // ]);
 
-        return view('mentor.dashboard');
+        $data = new \App\Models\CampFeed;
+        $data->title = $request->title;
+        $data->feed = $request->feed;
+        $data->header = $request->header;
+        $data->image = $request->image;
+        $data->camp_id = $request->camp_id;
+        $data->save();
+
+
+        $camp_feeds = CampFeed::with('Camp')->get();
+
+        return view('mentor.dashboard', compact('camp_feeds'));
     }
 
 
@@ -83,6 +91,10 @@ class LoginController extends Controller
     public function edit($id)
     {
         //
+
+        $camp_feeds = DB::table('camp_feeds')->where('id', $id)->get();
+
+        return view('mentor.form-edit', compact('camp_feeds'));
     }
 
     /**
@@ -92,9 +104,20 @@ class LoginController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
+        DB::table('camp_feeds')->where('id', $request->id)->update([
+            'title' => $request->title,
+            'header' => $request->header,
+            'feed' => $request->feed,
+            'image' => $request->image,
+            'camp_id' => $request->camp_id,
+        ]);
+
+        $camp_feeds = CampFeed::with('Camp')->get();
+
+        return view('mentor.dashboard', compact('camp_feeds'));
     }
 
     /**
@@ -103,8 +126,21 @@ class LoginController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function formAdd()
+    {
+        $camp_feeds = CampFeed::with('Camp')->get();
+        return view('mentor.form-add', ['camp_feeds' => $camp_feeds]);
+    }
+
     public function destroy($id)
     {
         //
+        // menghapus data camp berdasarkan id yang dipilih
+        DB::table('camp_feeds')->where('id', $id)->delete();
+
+        $camp_feeds = CampFeed::with('Camp')->get();
+
+        return view('mentor.dashboard', compact('camp_feeds'));
     }
 }

@@ -47,7 +47,7 @@ class CheckoutController extends Controller
      */
     public function store(Request $request, Camp $camp)
     {
-        // var_dump($request->all());
+        var_dump($request->all());
         //mapping request data
         $data = $request->all();
         $data['user_id'] = Auth::id();

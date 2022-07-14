@@ -26,6 +26,5 @@ class CampFeedSeeder extends Seeder
         ];
 
         campFeed::insert($campFeed);
-
     }
 }

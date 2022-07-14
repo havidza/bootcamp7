@@ -61,6 +61,11 @@ Route::middleware(['auth'])->group(function () {
     //Mentor Dashboard
     Route::prefix('mentor/dashboard')->namespace('Mentor')->name('mentor.')->group(function () {
         Route::get('/', [MentorLogin::class, 'index'])->name('dashboard');
+        Route::get('/form-add', [MentorLogin::class, 'formAdd'])->name('form-add');
+        Route::post('/add', [MentorLogin::class, 'store'])->name('add');
+        Route::get('/edit/{id}', [MentorLogin::class, 'edit'])->name('edit');
+        Route::post('/update', [MentorLogin::class, 'update'])->name('update');
+        Route::get('/destroy/{id}', [MentorLogin::class, 'destroy'])->name('destroy');
     });
 
     //invoice

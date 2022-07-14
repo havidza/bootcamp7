@@ -27,7 +27,7 @@
 <div class="container">
     @foreach ($camp_feeds as $cf)
     <br><br><center>
-        <h5>{{ $cf->header }}</h5><br><br>
+        <h2>{{ $cf->title }}</h2><br><br>
     <div class="row">
         <div class="col-4">
             <table class="table table-borderless table-responsive-md"> 
@@ -36,8 +36,7 @@
                         <th>
                             <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Pendahuluan</a>
-                                <a href="#" class="list-group-item list-group-item-action">Komputasi Cloud</a>
-                                <a href="#" class="list-group-item list-group-item-action">Model Penerapan Untuk Komputasi Dasar</a>
+                                <a href="#" class="list-group-item list-group-item-action">{{ $cf->header }}</a>
                               </div>
                         </th>
                     </tr>
@@ -60,14 +59,14 @@
                     <tr>
                         <td align="center">
                             <ul class="list-group">
-                                <li class="list-group-item"><h4>{{ $cf->title }}</h4></td></li>
+                                <li class="list-group-item"><h4>{{ $cf->header }}</h4></td></li>
                             </ul>
                     </tr>
                     <tr><tr><td><br></td></tr>
-                        <td align="center"><img src="{{ $cf->image }}" width="100%"></td>
+                        <td align="center"><img src="{{ $cf->image }}" width="90%"></td>
                     </tr>
                     <tr><tr><td><br></td></tr>
-                        <td align="justify">{{ $cf->feed }}</td>
+                        <td><p>{!! $cf->feed !!}</p></td>
                     </tr>
                 </thead>
             </table>
