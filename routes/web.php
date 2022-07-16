@@ -45,6 +45,8 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('user/dashboard')->namespace('User')->name('user.')->middleware('ensureUserRole:user')->group(function () {
         Route::get('/', [UserDashboard::class, 'index'])->name('dashboard');
         Route::get('/class', [ClassController::class, 'index'])->name('class');
+        Route::get('/invoice', [UserDashboard::class, 'cetakInvoice'])->name('invoice');
+        Route::get('/invoiceDone', [UserDashboard::class, 'cetakInvoiceDone'])->name('invoice-done');
 
         // Route::get('/{class:slug}', [UserDashboard::class, 'create'])->name('class.create');
     });

@@ -3,7 +3,7 @@
 <br><br>
     <div class="container">
         <div class="row">
-            <div class="col-11 offset-0">
+            <div class="col-12 offset-0">
                 <div class="card">
                      <!-- Notifikasi menggunakan flash session data -->
                 @if (session('success'))
@@ -30,8 +30,8 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Code Camp </th>
-                                    <th>Title</th>
+                                    <th align="justify">Code Camp </th>
+                                    <th align="justify">Title</th>
                                     <th>Feed</th>
                                     <th>Image</th>
                                     <th>Camp ID</th>
@@ -45,7 +45,7 @@
                                         <td width="20%">{{ $cf->title }}</td>
                                         <td width="30%">{{ $cf->feed }}</td>
                                         <td width="12%"><img src="{{ $cf->image }}" width="100%"></td>
-                                        <td width="12%">{{ $cf->camp_id }}</td>
+                                        <td width="10%">{{ $cf->camp_id }}</td>
                                         <td>
                                             {{-- <form action="{{ route('mentor.camp.destroy', $cf->id) }}" method="POST"> --}}
                                                <a href="{{ route('mentor.destroy', $cf->id) }}">

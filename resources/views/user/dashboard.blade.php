@@ -43,9 +43,11 @@
                         </td>
                         @if ($checkout->is_paid) 
                         <td>
-                        <a href="{{ route('user.class') }}" class="btn btn-primary"> Go To Class
-                                </a>
+                        <a href="{{ route('user.class') }}" class="btn btn-primary"> Go To Class</a>
+                        <td><a href="{{ route('user.invoice-done') }}" class="btn btn-primary">Invoice PDF</a></td>
+                            @else
                         </td>
+                        <td><a href="{{ route('user.invoice') }}" class="btn btn-primary">Invoice PDF</a></td>
                         @endif
                         <td>
                             <a href="https://wa.me/081227360292?text=Hi, saya [nama] ingin bertanya tentang kelas {{ $checkout->Camp->title }}" class="btn btn-success">
