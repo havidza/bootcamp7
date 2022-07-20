@@ -185,7 +185,7 @@
                     Pilih paket kelas sesuai pilihanmu <br> dan dapatkan silabus sesuai industri terkini
                                 </p>
                 <p class="mt-5">
-                    <a href="#" class="btn btn-master btn-thirdty me-3">
+                    <a href="{{ route('download-silabus') }}" class="btn btn-master btn-thirdty me-3">
                         View Syllabus
                     </a>
                 </p>

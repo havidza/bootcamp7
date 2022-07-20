@@ -25,7 +25,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-
+Route::get('/download-silabus', [HomeController::class, 'silabus'])->name('download-silabus');
 
 //Socialite routes
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
