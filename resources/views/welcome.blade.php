@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<br>
 <section class="banner">
     <div class="container">
         <div class="row justify-content-center">
@@ -171,7 +172,7 @@
     </div>
 </section> --}}
 
-<section class="pricing">
+<section class="pricing" id="pricing">
     <div class="container">
         <div class="row pb-70">
             <div class="col-lg-5 col-12 header-wrap copywriting">
@@ -297,7 +298,7 @@
     </div>
 </section>
 
-<section class="testimonials">
+<section class="testimonials" id="testimonials">
     <div class="container">
         <div class="row text-center pb-70">
             <div class="col-lg-12 col-12 header-wrap">

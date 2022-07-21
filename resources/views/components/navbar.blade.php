@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand" href="{{ route('welcome') }}">
             <img src="{{ asset('images/logo.png') }}" alt="" >
@@ -9,16 +9,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Program</a>
+                    <a class="nav-link" aria-current="page" href="#">Program</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mentor</a>
+                    <a class="nav-link"  href="#">Mentor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#pricing">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Business</a>
+                    <a class="nav-link" href="#testimonials">Testimoni</a>
                 </li>
             </ul>
 
@@ -57,3 +57,4 @@
         </div>
     </div>
 </nav>
+<br>

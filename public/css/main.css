@@ -1,10 +1,16 @@
+html {
+  scroll-behavior: smooth;  
+}
 body {
   font-family: 'Poppins', sans-serif;
 }
-
 th,
 td {
   padding: 10px;
+}
+
+nav {
+  background-color: #fcfcfc;
 }
 
 .pl-150 {
