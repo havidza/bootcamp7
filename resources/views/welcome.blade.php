@@ -118,6 +118,7 @@
                 <p class="support">
                     Belajar darimana saja dan <br> dapatkan skill baru
                 </p>
+
             </div>
         </div>
         <div class="row item-step pb-70">
@@ -301,7 +302,7 @@
                         <div class="item-review">
                             <img src="{{ asset('images/stars.svg') }}" alt="">
                             <p class="message">
-                                I was not really into code but after they teach me how to train my logic then I was really fall in love with code
+                                Saya tidak terlalu suka koding tetapi setelah mereka mengajari saya cara melatih logika saya, saya benar-benar jatuh cinta dengan koding
                             </p>
                             <div class="user">
                                 <img src="{{ asset('images/fanny_photo.png') }}" class="photo" alt="">
@@ -310,7 +311,7 @@
                                         Fanny
                                     </h4>
                                     <p class="role">
-                                        Developer at Google
+                                        Developer di Google
                                     </p>
                                 </div>
                             </div>
@@ -320,7 +321,7 @@
                         <div class="item-review">
                             <img src="{{ asset('images/stars.svg') }}" alt="">
                             <p class="message">
-                                Code is really important if we want to build a company and strike to the win
+                                Koding sangat penting jika kita ingin membangun sebuah start-up.
                             </p>
                             <div class="user">
                                 <img src="{{ asset('images/beatrice.png') }}" class="photo" alt="">
@@ -329,7 +330,7 @@
                                         Beatrice
                                     </h4>
                                     <p class="role">
-                                        CEO at Ajus Corp
+                                        CEO di Ajus Corp
                                     </p>
                                 </div>
                             </div>
@@ -339,31 +340,109 @@
                         <div class="item-review">
                             <img src="{{ asset('images/stars.svg') }}" alt="">
                             <p class="message">
-                                My background is design and art but I do really love how to make my design working in the development phase
+                                Latar belakang saya adalah desain dan seni tetapi saya sangat menyukai bagaimana membuat desain saya berfungsi dalam tahap pengembangan
                             </p>
                             <div class="user">
-                                <img src="{{ asset('images/beatrice.png') }}" class="photo" alt="">
+                                <img src="{{ asset('images/maman.jpg') }}" class="photo rounded-circle" alt="">
                                 <div class="info">
                                     <h4 class="name">
-                                        Beatrice
+                                        Andi
                                     </h4>
                                     <p class="role">
-                                        QA at Facebook
+                                        UI UX di Media.inc
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row copyright">
+                {{-- <div class="row copyright">
                     <div class="col-lg-12 col-12">
                         <p>
                             All Rights Reserved. Copyright PT. Codev8 Technology Indonesia
                         </p>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
 </section>
+<footer class="text-white text-center text-lg-start" style="background-color: #0c50b4;">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Tentang Perusahaan</h5>
+
+          <p>
+            PT. Codev8 Teknologi Indonesia merupakan salah satu perusahaan yang bergerak dalam bidang teknologi dan jasa.
+          </p>
+
+          <p>
+            Misi kami adalah menyediakan kursus online yang terjangkau bagi seluruh masyarakat Indonesia.
+          </p>
+
+          <div class="mt-4">
+            <!-- Facebook -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-facebook-f"></i></a>
+            <!-- Twitter -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i></a>
+            <!-- Google + -->
+            <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-google-plus-g"></i></a>
+            <!-- Linkedin -->
+          </div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Nusukan, Surakarta, Indonesia</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">admin@codev8.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+62 819 123 768</span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Jam Operasional</h5>
+
+          <table class="table text-center text-white">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td>Senin - Jumat :</td>
+                <td>08.00 - 16.00</td>
+              </tr>
+              <tr>
+                <td>Sabtu :</td>
+                <td>08.00 - 14.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright 
+      PT. Codev8 Technology Indonesia
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+    
 @endsection
