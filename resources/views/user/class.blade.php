@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<br><br><br>
 @section('content')
 
     {{-- <div class="container"><br><br>
@@ -27,7 +27,7 @@
 <div class="container">
     @foreach ($camp_feeds as $cf)
     <br><br><center>
-        <h2>{{ $cf->title }}</h2><br><br>
+        <h3>{{ $cf->title }}</h3><br><br><br>
     <div class="row">
         <div class="col-4">
             <table class="table table-borderless table-responsive-md"> 
@@ -36,7 +36,8 @@
                         <th>
                             <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Pendahuluan</a>
-                                <a href="#" class="list-group-item list-group-item-action">{{ $cf->header }}</a>
+                                <a href="#" class="list-group-item list-group-item-action">Pengertian Komputasi Awan</a>
+                                <a href="#" class="list-group-item list-group-item-action">Manfaat Komputasi Awan</a>
                               </div>
                         </th>
                     </tr>
@@ -66,7 +67,7 @@
                         <td align="center"><img src="{{ $cf->image }}" width="90%"></td>
                     </tr>
                     <tr><tr><td><br></td></tr>
-                        <td><p>{!! $cf->feed !!}</p></td>
+                        <td bgcolor="blue"><p>{!! $cf->feed !!}</p></td>
                     </tr>
                 </thead>
             </table>

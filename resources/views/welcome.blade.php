@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<br>
 <section class="banner">
     <div class="container">
         <div class="row justify-content-center">
@@ -20,7 +19,7 @@
                             Bootcamp kami membantu junior developer <br> yang mempunyai keinginan menjadi programmer
                         </p>
                         <p class="cta">
-                            <a href="#" class="btn btn-master btn-primary">
+                            <a href="#pricing" class="btn btn-master btn-primary">
                                 Get Started
                             </a>
                         </p>
@@ -42,7 +41,7 @@
 </section>
 
 
-<section class="benefits">
+<section class="benefits" id="benefits" style="scroll-margin-top: 7em;">
     <div class="container">
         <div class="row text-center pb-70">
             <div class="col-lg-12 col-12 header-wrap">
@@ -81,7 +80,7 @@
                 <div class="item-benefit">
                     <img src="{{ asset('images/ic_globe-2.png') }}" class="icon" alt="">
                     <h3 class="title">
-                        1-1 Mentoring
+                        Mentoring
                     </h3>
                     <p class="support">
                         Kami akan memastikan bahwa <br> kamu mendapatkan yang kamu mau
@@ -103,7 +102,7 @@
     </div>
 </section>
 
-{{-- <section class="steps">
+<section class="steps">
     <div class="container">
         <div class="row item-step pb-70">
             <div class="col-lg-6 col-12 text-center">
@@ -117,12 +116,7 @@
                     Prepare The Journey
                 </h2>
                 <p class="support">
-                    Learn from anyone around the <br> world and get a new skills
-                </p>
-                <p class="mt-5">
-                    <a href="#" class="btn btn-master btn-secondary me-3">
-                        Learn More
-                    </a>
+                    Belajar darimana saja dan <br> dapatkan skill baru
                 </p>
             </div>
         </div>
@@ -135,12 +129,7 @@
                     Finish The Project
                 </h2>
                 <p class="support">
-                    Each of you will be joining the private group and also <br> working together with team members on project
-                </p>
-                <p class="mt-5">
-                    <a href="#" class="btn btn-master btn-secondary me-3">
-                        View Demo
-                    </a>
+                    Setiap dari kamu akan bergabung ke grup pribadi <br> juga belajar bersama dalam membangun sebuah projek
                 </p>
             </div>
             <div class="col-lg-6 col-12 text-center">
@@ -160,19 +149,14 @@
                     Big Demo Day
                 </h2>
                 <p class="support">
-                    Learn how to speaking in public to demonstrate your <br> final project and receive the important feedbacks
-                </p>
-                <p class="mt-5">
-                    <a href="#" class="btn btn-master btn-secondary me-3">
-                        Showcase
-                    </a>
+                    Belajar bagaimana cara berbicara secara publik untuk mendemonstrasikan <br> final projek serta mendapatkan masukan yang penting
                 </p>
             </div>
         </div>
     </div>
-</section> --}}
+</section>
 
-<section class="pricing" id="pricing">
+<section class="pricing" id="pricing" style="scroll-margin-top: 5em;">
     <div class="container">
         <div class="row pb-70">
             <div class="col-lg-5 col-12 header-wrap copywriting">
@@ -298,7 +282,7 @@
     </div>
 </section>
 
-<section class="testimonials" id="testimonials">
+<section class="testimonials" id="testimonials" style="scroll-margin-top: 3em;">
     <div class="container">
         <div class="row text-center pb-70">
             <div class="col-lg-12 col-12 header-wrap">

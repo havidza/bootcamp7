@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Program</a>
+                    <a class="nav-link" href="#">Program</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link"  href="#">Mentor</a>
+                    <a class="nav-link" href="#benefits">Benefits</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#pricing">Pricing</a>
@@ -56,5 +56,16 @@
             @endauth
         </div>
     </div>
+    <script>
+       $(document).ready(function(){ 
+
+        $('.nav-link').on("click", function(){
+
+        $('.nav-link').removeClass('active');
+
+        $(this).addClass('active');
+        });
+        });
+    </script>
 </nav>
 <br>
