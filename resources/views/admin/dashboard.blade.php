@@ -3,7 +3,7 @@
 <br><br>
     <div class="container">
         <div class="row">
-            <div class="col-11 offset-0">
+            <div class="col-12 offset-0">
                 <div class="card">
                     <div class="card-header">
                         List Camps Member Codev8
@@ -20,6 +20,7 @@
                                     <th>Price</th>
                                     <th>Register Data</th>
                                     <th>Paid Status</th>
+                                    <th>Contact User</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -31,7 +32,7 @@
                                         <td>{{ $checkout->User->name }}</td>
                                         <td>{{ $checkout->uniquecode }}</td>
                                         <td>{{ $checkout->Camp->title }}</td>
-                                        <td>IDR {{ $checkout->Camp->price }}k</td>
+                                        <td>Rp. {{ $checkout->Camp->price }}.000,00</td>
                                         <td>{{ $checkout->created_at->format('d M y') }}</td>
                                         <td>
                                             @if ($checkout->is_paid)
@@ -41,11 +42,16 @@
                                             @endif
                                         </td>
                                         <td>
+                                            <a href="https://wa.me/{{ $checkout->phone_number }}?text=Hi, saya Admin Codev ingin konfirmasi mengenai pembayaran kelas {{ $checkout->Camp->title }} oleh Kak {{ $checkout->User->name  }}. Harap untuk segera dibayar. Terimakasih." class="btn btn-success">
+                                                Contact
+                                            </a>
+                                        </td>
+                                        <td>
                                             @if (!$checkout->is_paid)
                                             <form action="{{ route('admin.checkout.update', $checkout->id) }}" method="POST">
                                                 @csrf
-                                                <button class="btn btn-primary btn-sm">
-                                                    Atur Ke Bayar
+                                                <button class="btn btn-primary">
+                                                    Approve
                                                 </button>
                                             </form>
                                             @endif
