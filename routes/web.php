@@ -47,7 +47,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/class', [ClassController::class, 'index'])->name('class');
         Route::get('/invoice', [UserDashboard::class, 'cetakInvoice'])->name('invoice');
         Route::get('/invoiceDone', [UserDashboard::class, 'cetakInvoiceDone'])->name('invoice-done');
-
+        Route::get('/question', [ClassController::class, 'question'])->name('question');
+        Route::get('/certificate', [ClassController::class, 'certificate'])->name('certificate');
         // Route::get('/{class:slug}', [UserDashboard::class, 'create'])->name('class.create');
     });
 

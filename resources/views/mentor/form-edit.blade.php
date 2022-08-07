@@ -38,7 +38,7 @@
                                         <div class="mb-4">
                                             <label class="form-label">Camp ID</label>
                                             <select name="camp_id" id="camp_id" class="form-control">   
-                                                <option value="{{ $cf->camp_id }}">{{ $cf->camp_id }} - - {{ $cf->Camp->title }}</option>
+                                                <option value="{{ $cf->camp_id }}">{{ $cf->camp_id }}</option>
                                                
                                             </select>
                                         </div>
