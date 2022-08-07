@@ -6,7 +6,7 @@
             <div class="col-11 offset-0">
                 <div class="card">
                     <div class="card-header">
-                     Form Add Camps Codev8
+                     Form Edit Camps Codev8
                     </div>
                     <br><br>
                     <div class="row justify-content-center">
@@ -38,7 +38,7 @@
                                         <div class="mb-4">
                                             <label class="form-label">Camp ID</label>
                                             <select name="camp_id" id="camp_id" class="form-control">   
-                                                <option value="{{ $cf->camp_id }}">{{ $cf->camp_id }}</option>
+                                                <option value="{{ $cf->camp_id }}">{{ $cf->camp_id }} - - {{ $cf->Camp->title }}</option>
                                                
                                             </select>
                                         </div>
@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.tiny.cloud/1/8iejvodqw0gj8d0kqz4k8spljndsuvok9jv7jxc3ehf51r2d/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.1.2/tinymce.min.js"></script>
     <script>
         tinymce.init({
           selector: 'textarea.my-editor',

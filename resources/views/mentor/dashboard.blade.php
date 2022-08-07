@@ -39,9 +39,10 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php $i=1 @endphp
                                 @forelse ($camp_feeds as $cf)
                                     <tr>
-                                        <td>CF-0{{ $cf->id }}</td>
+                                        <td>CF-0{{ $i++ }}</td>
                                         <td width="20%">{{ $cf->title }}</td>
                                         <td width="30%">{{ $cf->feed }}</td>
                                         <td width="12%"><img src="{{ $cf->image }}" width="100%"></td>

@@ -24,9 +24,10 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php $i=1 @endphp
                                 @forelse ($checkouts as $checkout)
                                     <tr>
-                                        <td>USER-0{{ $checkout->User->id }}</td>
+                                        <td>USER-0{{ $i++ }}</td>
                                         <td>{{ $checkout->User->name }}</td>
                                         <td>{{ $checkout->uniquecode }}</td>
                                         <td>{{ $checkout->Camp->title }}</td>

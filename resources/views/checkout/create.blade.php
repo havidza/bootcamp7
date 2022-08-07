@@ -40,7 +40,7 @@
                             </div>
                             <div class="mb-4">
                                 <label class="form-label">Email Address</label>
-                                <input name="email" type="text" class="form-control" value="{{ Auth::user()->email }}" required>
+                                <input name="email" type="email" class="form-control" value="{{ Auth::user()->email }}" required>
                             {{-- @if ($errors->has('email'))
                                 <p class="text-danger">{{ $errors->first('email') }}</p>
                             @endif --}}
@@ -54,7 +54,7 @@
                             </div>
                             <div class="mb-4">
                                 <label class="form-label">Phone Number</label>
-                                <input name="phone_number" type="text" class="form-control" required value="{{ Auth::user()->phone_number }}">
+                                <input name="phone_number" type="number" class="form-control" required value="{{ Auth::user()->phone_number }}">
                             </div>
                             <div class="mb-4">
                                 <label class="form-label">Unique Code</label>

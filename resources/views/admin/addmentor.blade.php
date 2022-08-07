@@ -24,9 +24,10 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
+                            @php $i=1 @endphp
                             @foreach ($users as $usr)
                             <tr>
-                                <td>MENTOR-0{{ $usr->id }}</td>
+                                <td>MNTR-0{{ $i++ }}</td>
                                 <td>{{ $usr->name }}</td>
                                 <td>{{ $usr->email }}</td>
                                 @if ($usr->is_mentor)
