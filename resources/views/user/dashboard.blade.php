@@ -41,11 +41,16 @@
                                 <strong>Menunggu Pembayaran</strong>
                             @endif
                         </td>
-                        @if ($checkout->is_paid) 
-                        <td>
-                        <a href="{{ route('user.class') }}" class="btn btn-primary"> Go To Class</a>
-                        <td><a href="{{ route('user.invoice-done') }}" class="btn btn-primary">Invoice PDF</a></td>
-                            @else
+                        @if ($checkout->is_paid && $checkout->camp_id == 1) 
+                            <td>
+                            <a href="{{ route('user.class') }}" class="btn btn-primary"> Go To Class</a>
+                            <td><a href="{{ route('user.invoice-done') }}" class="btn btn-primary">Invoice PDF</a></td>
+                            </td>
+                        @elseif ($checkout->is_paid && $checkout->camp_id == 2)
+                            <td>
+                            <a href="{{ route('user.class2') }}" class="btn btn-primary"> Go To Class</a>
+                            <td><a href="{{ route('user.invoice-done') }}" class="btn btn-primary">Invoice PDF</a></td>
+                        @else
                         </td>
                         <td><a href="{{ route('user.invoice') }}" class="btn btn-primary">Invoice PDF</a></td>
                         @endif

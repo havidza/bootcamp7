@@ -54,23 +54,7 @@
                                   <div class="accordion-body">
                                     <div class="accordion-body">
                                         <ul class="list-group">
-                                            <a href="{{ route('user.question') }}"><li class="list-group-item">Question</li></a>
-                                          </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Download PDF
-                                  </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                  <div class="accordion-body">
-                                    <div class="accordion-body">
-                                        <ul class="list-group">
-                                            <a href="{{ route('user.downloadPDF') }}"><li class="list-group-item">Download PDF</li></a>
+                                            <a href="{{ route('user.question2') }}"><li class="list-group-item">Question</li></a>
                                           </ul>
                                     </div>
                                   </div>

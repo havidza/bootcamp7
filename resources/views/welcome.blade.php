@@ -16,7 +16,7 @@
                         </h1>
                         
                         <p class="support">
-                            Bootcamp kami membantu junior developer <br> yang mempunyai keinginan menjadi programmer
+                            Bootcamp kami membantu junior cloud developer <br> yang mempunyai keinginan menjadi expert cloud developer
                         </p>
                         <p class="cta">
                             <a href="#pricing" class="btn btn-master btn-primary">
@@ -181,7 +181,7 @@
                     <div class="col-lg-6 col-12">
                         <div class="table-pricing paket-biasa   ">
                             <p class="story text-center">
-                                BELAJAR NAGIH
+                                BELAJAR NAGIH <br>CLOUD COMPUTING AZURE
                             </p>
                             <h1 class="price text-center">
                                 200K
@@ -236,7 +236,7 @@
                     <div class="col-lg-6 col-12">
                         <div class="table-pricing paket-biasa">
                             <p class="story text-center">
-                                BARU BELAJAR
+                                BARU BELAJAR <br>CLOUD COMPUTING AZURE
                             </p>
                             <h1 class="price text-center">
                                 100K

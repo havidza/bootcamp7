@@ -24,10 +24,33 @@ class ClassController extends Controller
         ]);
     }
 
+    public function class2()
+    {
+        # code...
+        $camp_feeds = CampFeed::with('Camp')->simplePaginate(1);
+        return view('user.class2', [
+            'camp_feeds' => $camp_feeds
+        ]);
+    }
+
     public function question()
     {
         # code...
         return view('user.question');
+    }
+
+    public function question2()
+    {
+        # code...
+        return view('user.question2');
+    }
+
+    public function downloadPDF()
+    {
+        # code...
+        $camp_feeds = CampFeed::get();
+        $pdf = PDF::loadview('user.printMateri', ['camp_feeds' => $camp_feeds])->setPaper('a4', 'landscape');;
+        return $pdf->download('Materi Bootcamp.pdf');
     }
 
     public function certificate()
